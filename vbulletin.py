@@ -23,7 +23,7 @@ class Vbulletin:
 
         DesiredCapabilities.PHANTOMJS['phantomjs.page.settings.userAgent'] = 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:16.0) Gecko/20121026 Firefox/16.0'
 
-        self.driver = webdriver.PhantomJS("/root/dev/phantomjs/phantomjs-2.1.1-linux-i686/bin/phantomjs", service_args=['--ignore-ssl-errors=true', '--ssl-protocol=any'])
+        self.driver = webdriver.PhantomJS(service_args=['--ignore-ssl-errors=true', '--ssl-protocol=any'])
         
         self.driver.set_window_size(1120, 550)
         
