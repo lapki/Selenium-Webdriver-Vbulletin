@@ -46,6 +46,8 @@ class Vbulletin:
         username.send_keys(self.username)
         try:
             password = self.driver.find_element_by_name("vb_login_password")
+            password.submit()
+            time.sleep(3)
         
         except Exception ElementNotVisibleException:
             self.driver.execute_script("$p = document.getElementById('navbar_password'); $parent = $p.parentNode; $new = $p.cloneNode(); $new['style'].display = 'inline'; $parent.replaceChild($new, $p);")
