@@ -103,8 +103,7 @@ class Vbulletin:
         print(self.driver.current_url)
         subject = self.driver.find_element_by_name("subject")
         subject.send_keys(self.subject)
-
-        iframe = ""
+        
         try:
             message = self.driver.find_element_by_name("message")
             message.send_keys(self.body)
